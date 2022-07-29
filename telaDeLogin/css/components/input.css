@@ -1,0 +1,14 @@
+.form-input {
+    display: block;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: var(--default-transition);
+    padding: var(--gutter) var(--gutter-2);
+    height: var(--input-size);
+    line-height: var(--input-size);
+    border-radius: var(--border-radius-form);
+}
+
+.form-input:focus {
+    border-color: var(--color-terciary);
+}

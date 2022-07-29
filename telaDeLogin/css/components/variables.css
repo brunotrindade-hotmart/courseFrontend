@@ -1,0 +1,28 @@
+:root{
+    --color-white: #FFF;
+    --color-black: #000;
+    --color-primary: #5F5DA6;
+    --color-primary-dark: #413f75;
+    --color-primary-darker: #32315c;
+    --color-secundary: #8F8EBF;
+    --color-secundary-dark: #727199;
+    --color-secundary-darker: #4c4b66;
+    --color-terciary: #2E4159;
+    --color-terciary-dark: #2e445e;
+    --color-terciary-darker: #202e40;
+
+    --gutter-half: calc( var(--gutter)/2);
+    --gutter:8px;
+    --gutter-2: calc( var(--gutter)*2);
+    --gutter-3: calc( var(--gutter)*3);
+    
+    --sm: 480px; 
+    --md: 768px;
+    --lg: 900px;
+    --xl: 1200px;
+
+    --border-radius-form: 30px;
+    --input-size: 30px;
+
+    --default-transition: all 0.2s ease-in-out;
+}

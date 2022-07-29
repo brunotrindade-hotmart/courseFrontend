@@ -1,0 +1,11 @@
+.form-control{
+    display: block;
+    width: 100%;
+    margin-bottom: var(--gutter);
+}
+
+.form-control label {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--gutter-half);
+}
