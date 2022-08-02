@@ -1,9 +1,15 @@
 #login-container {
     background: url('../img/login.jpeg') no-repeat center;
-    height: 100vh;
     background-size: cover;
+    height: 100vh;
     position: relative;
     padding: var(--gutter-2);
+    opacity: 0;
+    filter: blur(20px);
+    animation-name: page-in;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-delay: 300ms;
 }
 
 #login-container h1 {
@@ -14,7 +20,7 @@
 
 #login-container form {
     background: rgba(255, 255, 255, 0.5);
-    padding: var(--gutter-2);
+    padding: var(--gutter-2) var(--gutter-5);
     border-radius: var(--gutter);
     display: inline-block;
     backdrop-filter: blur(3px);
@@ -39,6 +45,34 @@
     font-size: .8rem;
 }
 
+#control-login:not(:checked) ~ .login-form {
+    animation-name: form-in;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards; 
+}
+
+#control-login:checked ~ .login-form {
+    animation-name: form-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards; 
+}
+
+#control-login:checked ~ .register-form {
+    animation-name: form-in;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards; 
+}
+
+#control-login:not(:checked) ~ .register-form {
+    animation-name: form-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards; 
+}
+
+#control-login {
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
     #login-container form{
         top: 0;
@@ -47,8 +81,71 @@
         position: relative;
         height: 100%;
         width: 100%;
+        max-width: 100%;
         word-break: break-all;
         display:flex;
-        max-width: 100%;
     }
+
+    #login-container form > div {
+        margin: auto;
+    }
+
+    #login-container .register {
+        flex-direction: column;
+    }
+
+    #login-container .register .btn {
+        width: 100%;
+    }
+}
+@keyframes page-in {
+    from {
+        opacity: 0;
+        filter: blur(20px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes form-in {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+        left:55%;
+        z-index: -1;
+    }
+    99% {
+        opacity: 1;
+        filter: blur(0);
+        left: 50%;
+        z-index: -1;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        left:50%;
+        z-index: 1;
+    }
+}
+
+@keyframes form-out {
+        0% {
+            opacity: 1;
+            filter: blur(0);
+            left:50%;
+        }
+        99% {
+            opacity: 0;
+            filter: blur(20px);
+            left: 55%;
+            z-index: 1;
+        }
+        100% {
+            opacity: 0;
+            filter: blur(20px);
+            left:55%;
+            z-index: -1;
+        }
 }

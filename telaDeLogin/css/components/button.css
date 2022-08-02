@@ -5,6 +5,7 @@
     border-color: transparent;
     transition: var(--default-transition);
     padding: var(--gutter) var(--gutter-2);
+    font-size: .8rem
 }
 
 .btn-block{

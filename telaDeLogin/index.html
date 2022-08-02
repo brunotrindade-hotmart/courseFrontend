@@ -10,7 +10,8 @@
 </head>
 <body>
     <main id="login-container">
-        <form action="#">
+        <input type="checkbox" id="control-login" name="control-login">
+        <form action="#" class="login-form">
             <div>
                 <h1>
                     <i class="fa-brands fa-bitcoin"></i>
@@ -30,8 +31,40 @@
                 <div class="mt-2">
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                     <div class="register">
-                        <button type="button" class="btn btn-terciary btn-block">Cadastrar</button>
+                        <label for="control-login" class="btn btn-terciary" role="button">Cadastrar</label>
+                        <!-- <button type="button" class="btn btn-terciary">Cadastrar</button> -->
                         <a href="#" class="forgot-password">Esqueci minha senha</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form action="#" class="register-form">
+            <div>
+                <h1>
+                    <i class="fa-brands fa-bitcoin"></i>
+                    Exchange - Cadastrar
+                </h1>
+                
+                <div class="form-control">
+                    <label for="register-user">Usuário</label>
+                    <input type="text" name="register-user" id="register-user" class="form-input">
+                </div>
+                
+                <div class="form-control">
+                    <label for="register-password">Senha</label>
+                    <input type="register-password" name="password" id="register-password" class="form-input">
+                </div>
+
+                <div class="form-control">
+                    <label for="register-password-again">Repita a senha</label>
+                    <input type="password" name="register-password-again" id="register-password-again" class="form-input">
+                </div
+                >
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                    <div class="register">
+                        <label for="control-login" class="btn btn-terciary" role="button">Voltar</label>
                     </div>
                 </div>
             </div>
