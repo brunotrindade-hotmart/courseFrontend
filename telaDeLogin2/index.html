@@ -12,28 +12,55 @@
     <div class="login-container">
         <div class="login-bg"></div>
         <div class="form-container">
-            <form action="#">
-
-                <h1>Product Login</h1>
-
-                <div class="form-control">
-                    <label for="login" class="sr-only">Login</label>
-                    <input type="text" class="form-input" name="login" id="login" placeholder="Digite seu login">
-                </div>
-
-                <div class="form-control">
-                    <label for="password" class="sr-only">Senha</label>
-                    <input type="password" class="form-input" name="passwprd" id="password" placeholder="Digite sua senha">
-                </div>
-
-                <div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <div class="helper-links">
-                        <a href="#" title="Cadastre-se aqui">Cadastrar</a>
-                        <a href="#" title="Resete sua senha">Esqueci minha senha</a>
+            <input type="checkbox" name="checkForm" id="checkForm">
+            <div class="form-wrapper">
+                <form action="#" class="form-login">
+                    <h1>Product Login</h1>
+                    
+                    <div class="form-control">
+                        <label for="login" class="sr-only">Login</label>
+                        <input type="text" class="form-input" name="login" id="login" placeholder="Digite seu login">
                     </div>
-                </div>
-            </form>
+                    
+                    <div class="form-control">
+                        <label for="password" class="sr-only">Senha</label>
+                        <input type="password" class="form-input" name="password" id="password" placeholder="Digite sua senha">
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="helper-links">
+                            <label for="checkForm">Cadastrar</label>
+                            <a href="#" title="Resete sua senha">Esqueci minha senha</a>
+                        </div>
+                    </div>
+                </form>
+                <form action="#" class="form-register">
+                    <h1>Product Logon</h1>
+
+                    <div class="form-control">
+                        <label for="user-register" class="sr-only">Login</label>
+                        <input type="text" class="form-input" name="user-login" id="user-login" placeholder="Digite sua Login">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="password-register" class="sr-only">Senha</label>
+                        <input type="password" class="form-input" name="password-register" id="password-register" placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="password-again-register" class="sr-only">Senha</label>
+                        <input type="password" class="form-input" name="password-again-register" id="password-again-register" placeholder="Repita sua senha">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <div class="helper-links">
+                            <label for="checkForm">Cancelar</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

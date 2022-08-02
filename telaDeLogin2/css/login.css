@@ -8,7 +8,8 @@
 }
 
 .login-bg {
-    background: #000;
+    background: url('../img/wp9776630-cool-wallpaper-1920x1080.jpg') center no-repeat;
+    background-size: cover;
     z-index: 0;
 }
 
@@ -17,15 +18,16 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+    padding: var(--gutter);
 }
 
-.form-container form {
-    width: 40%;
-    max-width: 480px;
+.form-container .form-wrapper {
+    width: 100%;
+    max-width: 320px;
     border-radius: var(--border-radius);
     border: 2px dashed var(--color-primary-dark);
     padding: calc(var(--gutter)*2) calc(var(--gutter)*4);
-
+    position: relative;
 }
 
 .form-container .btn {
@@ -56,9 +58,119 @@ h1 {
     color: var(--color-primary-darker);
 }
 
-@media screen and (max-width: 480px){
+#checkForm {
+    display: none;
+}
+
+.form-wrapper form {
+    position: absolute;
+    inset: calc(var(--gutter)*2) calc(var(--gutter)*4);
+}
+
+.form-wrapper {
+    transition: height 250ms ease-in-out;
+    animation-name: wrapper-in;
+    animation-duration: 200ms;
+    animation-delay: 300ms;
+    animation-fill-mode: both;
+}
+
+#checkForm:not(:checked) ~ .form-wrapper {
+    height: 290px;
+} 
+
+#checkForm:checked ~ .form-wrapper {
+    height: 320px;
+} 
+
+#checkForm:checked ~ .form-wrapper .form-register {
+    animation-name: form-in;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+    animation-delay: 300ms;
+}
+
+#checkForm:not(:checked) ~ .form-wrapper .form-register {
+    animation-name: form-out;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+}
+
+#checkForm:checked ~ .form-wrapper .form-login {
+    animation-name: form-out;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+    animation-delay: 250ms;
+}
+
+#checkForm:not(:checked) ~ .form-wrapper .form-login {
+    animation-name: form-in;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+    animation-delay: 300ms;
+}
+
+@media screen and (max-width: 680px){
     .login-bg {
         position: absolute;
         inset: 0
+    }
+
+    .form-container .form-wrapper {
+        backdrop-filter: blue(2px);
+        background: rgba(255, 255, 255, .5);
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: var(--gutter);
+
+    }
+}
+
+@media screen and (max-height: 250px) {
+    .form-container {
+        display: block;
+        overflow-y: auto;
+    }
+}
+
+@keyframes wrapper-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes form-in {
+    0% {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+@keyframes form-out {
+    0% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
     }
 }
