@@ -1,0 +1,7 @@
+@import './components/input.css';
+@import './components/button.css';
+
+.form-control {
+    width: 100%;
+    margin-bottom: var(--gutter);
+}

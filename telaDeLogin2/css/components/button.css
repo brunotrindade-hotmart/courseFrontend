@@ -1,0 +1,29 @@
+.btn {
+    border-radius: var(--border-radius);
+    border: 1px solid #5d5d5d;
+    color: #5d5d5d;
+    background: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    padding: var(--gutter);
+    transition: all 150ms ease-in-out;
+}
+
+
+
+.btn-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:active {
+    background: var(--color-primary);
+    color: var(--color-primary-dark);
+}

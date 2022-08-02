@@ -1,0 +1,64 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-container > * {
+    flex: 1 1 50%;
+}
+
+.login-bg {
+    background: #000;
+    z-index: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.form-container form {
+    width: 40%;
+    max-width: 480px;
+    border-radius: var(--border-radius);
+    border: 2px dashed var(--color-primary-dark);
+    padding: calc(var(--gutter)*2) calc(var(--gutter)*4);
+
+}
+
+.form-container .btn {
+    margin-bottom: var(--gutter);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.helper-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.helper-links a{
+    color: var(--color-primary);
+    transition: all 150ms ease-in-out;
+}
+
+.helper-links a:hover{
+    color: var(--color-primary-dark);
+}
+
+.helper-links a:active{
+    color: var(--color-primary-darker);
+}
+
+@media screen and (max-width: 480px){
+    .login-bg {
+        position: absolute;
+        inset: 0
+    }
+}

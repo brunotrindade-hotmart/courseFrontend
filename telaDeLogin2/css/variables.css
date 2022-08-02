@@ -1,0 +1,8 @@
+:root {
+    --gutter: 8px;
+    --border-radius: 8px;
+
+    --color-primary: #5f5da6;
+    --color-primary-dark: #525091;
+    --color-primary-darker: #44427a;
+}
