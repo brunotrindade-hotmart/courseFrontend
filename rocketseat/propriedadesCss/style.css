@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+
+header {
+    padding: 4rem;
+    background-color: lightgray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+ul button {
+    background-color: black;
+    color: white;
+    padding: .8rem;
+}
