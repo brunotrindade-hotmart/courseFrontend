@@ -3,7 +3,7 @@
 }
 
 header {
-    padding: 4rem;
+    padding: 4 rem;
     background-color: lightgray;
 }
 
@@ -13,15 +13,16 @@ nav {
     align-items: center;
 }
 
-nav ul {
+ul {
     display: flex;
     list-style: none;
-    gap: 0.8rem;
     align-items: center;
+    gap: .8rem;
 }
 
-ul button {
-    background-color: black;
+ul li:last-child {
+    background: black;
     color: white;
     padding: .8rem;
+
 }
