@@ -5,8 +5,24 @@
     gap: 1vh;
 }
 
-.container h1 {
+.container header {
+    width: 50%;
     margin: 9vh 0 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container header img {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 1vh;
+    margin-left: .5vh;
+}
+
+.container header div {
+    display: flex;
+    align-items: center;
 }
 
 .container input {
