@@ -8,6 +8,7 @@ export default function StopWatch() {
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
   const [time, setTime] = useState(0);
+  const [dismount, setDismount] = useState(true);
   
   React.useEffect(() => {
     let interval = null;
@@ -37,9 +38,13 @@ export default function StopWatch() {
     setIsActive(false);
     setTime(0);
   };
+
+  const caughtDismountStop = (param) => {
+    // setDismount(param);
+  }
   
   return (
-    <div>
+    dismount && <div>
       <div className="stop-watch">
         <Timer time={time} />
         <ControlButtons
@@ -50,7 +55,7 @@ export default function StopWatch() {
           handleReset={handleReset}
           />
       </div>
-      <RandomNumber timer={ time } />
+      <RandomNumber timer={ time } caughtDismountStop={caughtDismountStop} />
     </div>
   );
 }

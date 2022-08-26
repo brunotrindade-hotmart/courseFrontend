@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-export default function Messanger({ hit }) {
+export default function Messanger({ caughtDismountRandom }) {
+
+  useEffect(() => {
+    return () => caughtDismountRandom(false);
+  }, []);
 
   return(
     <div>
-      {
-        hit && <h1>Acerto</h1>
-      }
+      <h1>Acerto</h1>
     </div>
   );
 };

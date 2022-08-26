@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Messanger from '../messanger';
 
-export default function RandomNumber({ timer }) {
+export default function RandomNumber({ timer, caughtDismountStop }) {
   const [hit, setHit] = useState(false);
   const [randomNumber, setRandomNumber] = useState();
+
+  const caughtDismountRandom = (param) => {
+    caughtDismountStop(param)
+  }
 
   const valueRandomNumber = () => setRandomNumber();
 
@@ -39,7 +43,9 @@ export default function RandomNumber({ timer }) {
     <div>
       <h3>Número Aleatório</h3>
       <h2>{ randomNumber }</h2>
-      <Messanger hit={hit} />
+      {
+        hit && <Messanger caughtDismountRandom={caughtDismountRandom} />
+      }  
     </div>
   );
 }
