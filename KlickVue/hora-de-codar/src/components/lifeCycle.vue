@@ -11,6 +11,14 @@ export default {
     return {
       nome: 'Carvalho'
     }
+  },
+  created() {
+    this.lifeCycle()
+  },
+  methods: {
+    lifeCycle() {
+      console.log('Executou!')
+    }
   }
 }
 </script>

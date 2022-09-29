@@ -3,7 +3,7 @@
     <h2>
       Esta é a descrição da pessoa: {{nome}}
     </h2>
-    <InfoUm />
+    <InfoUm :email="email"/>
   </div>
 </template>
 
@@ -17,7 +17,8 @@ export default {
   },
   data() {
     return {
-      nome: 'Bruno'
+      nome: 'Bruno',
+      email: "bruno.fox2_carvalho@hotmail.com"
     }
   }
 } 
